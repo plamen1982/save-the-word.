@@ -1,0 +1,7 @@
+{{input value=searchedWord}}
+<button {{action "searchForAWord"}}>Search for word</button>
+{{#each filteredWords as |word|}}
+  <div>{{word.wordName}}</div>
+  <button onclick={{action "deleteWord" word.id}}>Delete word</button>
+  <button onclick={{action "editWord" word.id}}>Edit word</button>
+{{/each}}

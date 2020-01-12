@@ -1,0 +1,6 @@
+
+<h1>Edit word</h1>
+<h1>{{model.wordName}}</h1>
+{{input placeholder="word" value=model.wordName}}
+{{input placeholder="description" value=model.description}}
+<button {{action 'updateWord' model}}>update word</button>

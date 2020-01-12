@@ -1,0 +1,15 @@
+<div>
+  <h1>Add word</h1>
+    {{input placeholder="word"  value=wordName name="wordName"}}
+    {{input placeholder="description" value=wordDescription name="wordDescription"}}
+    <button {{action 'showSynonymForm'}}>{{actionsForSynonym}}</button>
+    {{#if isSynonymClicked}}
+        {{input value=synonymName name="synonymName"}}
+        {{input value=synonymDescription name="synonymDescription"}}
+        <button {{action 'createSynonym'}}>Create synonym</button>
+    {{/if}}
+    <button {{action 'saveWord'}}>Save Word</button>
+    {{#if error}}
+      <div style="color:red;">{{error.message}}</div>
+    {{/if}}
+</div>
